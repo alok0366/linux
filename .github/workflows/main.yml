@@ -1,0 +1,12 @@
+name: Build and Test Linux Source Tree
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+
+jobs:
+  Build-and-Test:
+    uses: alok0366/actions-test/.github/workflows/main.yml@main
+  
