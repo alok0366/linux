@@ -5,8 +5,12 @@ on:
   pull_request:
   workflow_dispatch:
 
-
 jobs:
   Build-and-Test:
-    uses: alok0366/actions-test/.github/workflows/main.yml@main
-  
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Build and Test
+      uses: alok0366/actions-test/.github/workflows/main.yml@main
